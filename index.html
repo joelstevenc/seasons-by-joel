@@ -18,16 +18,38 @@ body {
   background-attachment: fixed; 
   background-size: cover;
 }
-</style>
+  </style>
 
-  <body>
+    <body>
     <h1>Khalid by Joel </h1>
     
     <p>
       Discover more of Khalids music here: <a href="https://youtube.com/playlist?list=PLedovvx3ekTB8HLdey4I-AMi2ADyP5FZ6">BEST OF KHALID</a>!
     </p>
+<script>
+function getVote(int) {
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+  </body>
+<body>
+
+<div id="poll">
+<h3>Do you like Khalids music?</h3>
+<form>
+Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+</form>
+</div>
 
   
    
-  </body>
+</body>
 </html>
