@@ -47,7 +47,7 @@ function getVote(int) {
 Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
 No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 </form>
-  <!-- Slideshow container -->
+ 
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
@@ -69,13 +69,13 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
     <div class="text">Khalid live at Governers Ball NYC </div>
   </div>
 
-  <!-- Next and previous buttons -->
+  
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
 
-<!-- The dots/circles -->
+
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
@@ -94,8 +94,9 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 <p><strong> YO!</strong> Click video for full screen of sneak peak of concert in NYC </p>
 
 <video width="100%" controls id="myvideo">
-  <source> src="https://cdn.glitch.com/1fb1f3bc-bae0-4741-865c-099c15a9d1eb%2FIMG_5089.mp4?v=1608349747381 type="video/mp4">
- 
+  <source src="https://cdn.glitch.com/1fb1f3bc-bae0-4741-865c-099c15a9d1eb%2FIMG_5089.mp4?v=1608349747381" type="video/mp4">
+  <source src="rain.ogg" type="video/ogg">
+
 </video>
 
 
@@ -104,9 +105,9 @@ var elem = document.getElementById("myvideo");
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
+  } else if (elem.webkitRequestFullscreen) { 
     elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
+  } else if (elem.msRequestFullscreen) { 
     elem.msRequestFullscreen();
   }
 }
